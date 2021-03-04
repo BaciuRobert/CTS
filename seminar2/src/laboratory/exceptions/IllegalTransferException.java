@@ -1,5 +1,5 @@
 package laboratory.exceptions;
 
-public class IllegalTransferException {
+public class IllegalTransferException extends Exception {
 
 }
