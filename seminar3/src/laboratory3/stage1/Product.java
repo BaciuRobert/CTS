@@ -1,26 +1,27 @@
 package laboratory3.stage1;
 
 public class Product {
-	public float Calculeaza(int t, float s, int perioada)
-	  {
-	    float rezultat = 0;
-	    float valoare = (perioada > 10) ? (float)15/100 : (float)perioada/100; 
-	    if (t == 1)
-	    {
-	      rezultat = s;
-	    }
-	    else if (t == 2)
-	    {
-	      rezultat = (s - (0.1f * s)) - valoare * (s - (0.1f * s));
-	    }
-	    else if (t == 3)
-	    {
-	      rezultat = (s - (0.25f * s)) - valoare * (s - (0.25f * s));
-	    }
-	    else if (t == 4)
-	    {
-	      rezultat = (s - (0.35f * s)) - valoare * (s - (0.35f * s));
-	    }
-	    return rezultat;
-	  }
+	
+	public static final int MAX_ACCOUNT_AGE = 10;
+	public static final float MAX_FIDELITY_DISCOUNT = 0.15f;
+	
+	public float getFinalPrice(int productType, float initialPrice, int accountAgeInYears) {
+		float finalPrice = 0;
+		float fidelityDiscount = (accountAgeInYears > MAX_ACCOUNT_AGE) ? MAX_FIDELITY_DISCOUNT : (float) accountAgeInYears / 100;
+		
+		if (productType == 1) {
+			finalPrice = initialPrice;
+		} else if (productType == 2) {
+			finalPrice = (initialPrice - (0.1f * initialPrice))
+					- fidelityDiscount * (initialPrice - (0.1f * initialPrice));
+		} else if (productType == 3) {
+			finalPrice = (initialPrice - (0.25f * initialPrice))
+					- fidelityDiscount * (initialPrice - (0.25f * initialPrice));
+		} else if (productType == 4) {
+			finalPrice = (initialPrice - (0.35f * initialPrice))
+					- fidelityDiscount * (initialPrice - (0.35f * initialPrice));
+		}
+		
+		return finalPrice;
+	}
 }
