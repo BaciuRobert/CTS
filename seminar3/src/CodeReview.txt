@@ -11,6 +11,8 @@ Stage 1.Naming conventions
 
 - remove the hardcoded values aka 'magic numbers'
 
+- validate your data inputs
 
+- replace if else with switch 
 
 
