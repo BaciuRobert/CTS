@@ -11,8 +11,17 @@ Stage 1.Naming conventions
 
 - remove the hardcoded values aka 'magic numbers'
 
-- validate your data inputs
-
+- validate your input values
 - replace if else with switch 
 
+Stage 2. KISS,Single Responsability ->reduce functions complexity
+-remove the switch by using a generic approach for each product type
+-outsource the validations
+-outsource the way the fidelity discount is computed
+
+
+Stage 3.Dependency Inversion Principle(DIP)
+-remove the dependency regarding the validation of input values
+-remove the dependency on the static values - they are given by the marketing team
+-remove the dependency on the way the fidelity is computed - Marketing will decide
 
