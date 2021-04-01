@@ -6,7 +6,7 @@ public class TestSingleton {
 		// TODO Auto-generated method stub
 
 		
-		RESTBackend theBackend=new RESTBackend
+		RESTBackend backend = RESTBackend.theBackend;
 	}
 
 }
