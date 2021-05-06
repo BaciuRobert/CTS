@@ -1,0 +1,49 @@
+1.Naming conventions
+-loan_value , account_Type  do not respect the general naming conventions(they use snake case instead of camel case)
+-spacing rule is not respected (Account[] 	accounts)
+
+	
+2.Meaningful Names
+-getter for loan needs a meaningfull name(changed to getValueOfLoan),the setValue also needs a more meaningfull name(changed to setValueOfLoan)
+-the 'calculate' method name is not specific enough (change to calculateAccountsTotalFee)
+
+3.Validations
+-validate the input values
+  rate cannot be < 0
+  
+  
+-remove the magic numbers(.0125 -brokers fee),365(days in a year)
+
+
+4.Excesive code
+-'print' method does nothing,the variabile is not used and the print inside it doesnt display anything usefull
+it should be deleted
+
+5.Object Construction
+-the Account constructor should be changed to private because it contains sensitive information
+
+
+6.Fundamentals
+-the class should be final since it's not used for inheritance
+-minimize the accessibility of  members-make the fields private
+
+
+7.Interfaces and classes
+-since the lead requested for 'getMonthlyRate' to be in all classes,we should make it an interface to avoid duplicity of code
+-In public classes, use accessor methods, not public fields -generate getters 
+
+
+-temp is an unused variable-it should be deleted
+8.Method optimization and performance problems
+   -account = accounts[i] 
+   -Account account 
+  Those 2 lines of code are not needed and its just extra code since we can use accounts[i] directly
+  
+ 9.Enums and Annotations
+ -Use enums instead of int constants-we make an enum for STANDARD=0,BUDGET=1,PREMIUM=2,SUPER_PREMIUM=3
+ 
+ 10.	Denial of Service
+ -Avoid excessive logs for unusual behavior- the print inside getLoan and getRate are extra code,they should be deleted
+ 
+ 11.Comments
+ -explain your code
