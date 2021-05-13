@@ -11,7 +11,7 @@ public class LoginWith2FactorAuth implements LoginInterface {
 	}
 
 	public boolean checkGeneratedCode(int code) {
-		if(code == 1245) {
+		if(code == 1234) {
 			return true;
 		}
 		else

@@ -13,6 +13,9 @@ public class TestPrototype {
 		
 		Char3DModel mickeyMouse2=(Char3DModel)mickeyMouse.clone();
 		Char3DModel mickeyMouse3=(Char3DModel)mickeyMouse.clone();
+		if(mickeyMouse2.equals(mickeyMouse))
+			System.out.println("good copy");
+		
 
 	}
 

@@ -18,7 +18,8 @@ public class TestBuilder {
 				new SuperHero.SuperHeroBuilder("Superman", 100).build();
 		
 		SuperHero joker=
-				new SuperHero.SuperHeroBuilder("Joker", 200).isWounded().isWounded().setRightWeapon(new Weapon()).build();
+				new SuperHero.SuperHeroBuilder("Joker", 200).isWounded().setRightWeapon(new Weapon()).setSuperPower(new Flying()).build();
+	
 
 	}
 
